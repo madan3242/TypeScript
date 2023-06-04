@@ -1,0 +1,49 @@
+Typescript
+----------
+Typescript is superset of JavaScript.
+Typescript is not about reinventing JavaScript.
+
+Don't use typescript, unless...
+
+Typescript is all about Type Safety.
+
+What typescript does: 
+    Static Checking:
+    Analyze the code as we type. That's it.
+
+TS -> JS
+
+It's a development tool. Your project still runs JS.
+
+Typescript installation:
+------------------------
+Globally Installing TypeScript: npm install -g typescript
+
+Types:
+------
+Number      Null        Object      Any     noImplicitANy
+String      Undefined   Array       Never
+Boolean     Void        Tuples      unknown
+
+Situations:
+-----------
+A function accepts 2 numbers
+A function return a string
+
+syntax
+------
+let varialeName: type = value;
+
+
+
+readonly    : keyword
+?           : literal question mark
+&
+
+Array
+-----
+const superHeros: string[] = [];
+const superPowers: Array<number> = [];
+
+
+Union is combination of 2 or 3 or more types of data in array

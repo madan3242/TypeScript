@@ -68,3 +68,12 @@ Class
 Public
 Private
 Protected
+
+
+interface
+
+abstract class
+
+
+Generics
+---------

@@ -19,13 +19,12 @@ function identityFour<T>(val: T): T{
     return val
 }
 
-identityFour<Bottle>({ brand: "", type: 89})
-
 interface Bottle {
     brand: string,
     type: number,
 }
 
+identityFour<Bottle>({ brand: "", type: 89})
 
 function getSearchProducts<T>(products: T[]): T{
     //do something
@@ -33,7 +32,41 @@ function getSearchProducts<T>(products: T[]): T{
     return products[myIndex]
 }
 
-const getMoreSearchProducts = <T>(products: T[]): T => {
+const getMoreSearchProducts = <T,>(products: T[]): T => {
     const myIndex = 5
     return products[myIndex]
+}
+
+interface Database {
+    connection: string,
+    username: string,
+    password: string
+}
+
+function anotherFunction<T, U  extends Database>(valOne: T, valTwo: U): object{
+    return {
+        valOne,
+        valTwo
+    }
+}
+
+// anotherFunction(3, {})
+
+interface Quiz{
+    name: string,
+    type: string
+}
+
+interface Course {
+    name: string,
+    author: string,
+    subject: string
+}
+
+class Sellable<T> {
+    public cart: T[] = []
+
+    addToCart(product: T){
+        this.cart.push(product)
+    }
 }
